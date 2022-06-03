@@ -2,11 +2,21 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from django.utils import timezone
 from .forms import PostForm
+from rest_framework.response import Response
+from rest_framework import generics
+from .serializers import PostSerializer
+
+class PostView(generics.RetrieveAPIView):
+    queryset = Post.objects.all()
+
+    def get(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializer = PostSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
-
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
