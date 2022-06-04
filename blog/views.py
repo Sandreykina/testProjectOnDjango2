@@ -5,46 +5,61 @@ from .forms import PostForm
 from rest_framework.response import Response
 from rest_framework import generics
 from .serializers import PostSerializer
+from django.conf import settings
+from django.contrib.auth.models import User
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
+    serializer_class = PostSerializer
 
+    #get post by Id or get all posts if there is no Id
     def get(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = PostSerializer(queryset, many=True)
+        try:
+            id = request.query_params["id"]
+            if id != None:
+                post = Post.objects.get(id=id)
+                serializer = PostSerializer(post)
+        except:
+            queryset = self.get_queryset()
+            serializer = PostSerializer(queryset, many=True)
+        
         return Response(serializer.data)
 
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    #add new post
+    def post(self, request, *args, **kwargs):
+        new_post_data = request.data
 
-def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+        user = User.objects.get(id=new_post_data["author"])
 
-def post_new(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
+        new_post = Post.objects.create(
+            author= user,
+            title=new_post_data["title"], text=new_post_data["text"],
+            created_date=timezone.now(), published_date=timezone.now())
 
-def post_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm(instance=post)
-    return render(request, 'blog/post_edit.html', {'form': form})
+        new_post.save()
+
+        queryset = self.get_queryset()
+        serializer = PostSerializer(queryset, many=True)
+        
+        return Response(serializer.data)
+
+    #change post by id
+    def put(self, request, *args, **kwargs):
+        id = request.query_params["id"]
+        
+        if id != None:
+            post_object = Post.objects.get(id=id)               
+            data = request.data
+            user = User.objects.get(id=data["author"])
+
+            post_object.author = user
+            post_object.text = data["text"]
+            post_object.created_date = data['created_date']
+            post_object.published_date = timezone.now()
+            post_object.title = data["title"]
+
+            post_object.save()
+
+            serializer = PostSerializer(post_object)
+        
+            return Response(serializer.data)
