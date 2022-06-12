@@ -7,11 +7,11 @@ from rest_framework import generics
 from .serializers import PostSerializer
 from django.conf import settings
 from django.contrib.auth.models import User
+from rest_framework import status
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-
     #get post by Id or get all posts if there is no Id
     def get(self, request, *args, **kwargs):
         try:
@@ -35,8 +35,6 @@ class PostView(generics.RetrieveAPIView):
             author= user,
             title=new_post_data["title"], text=new_post_data["text"],
             created_date=timezone.now(), published_date=timezone.now())
-
-        new_post.save()
 
         queryset = self.get_queryset()
         serializer = PostSerializer(queryset, many=True)
@@ -63,3 +61,12 @@ class PostView(generics.RetrieveAPIView):
             serializer = PostSerializer(post_object)
         
             return Response(serializer.data)
+
+    #delete post by id
+    def delete(self, request, *args, **kwargs):
+        id = request.query_params["id"]
+        
+        if id != None:
+            post_to_delete=Post.objects.get(id=id)
+            post_to_delete.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)

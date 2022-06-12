@@ -9,5 +9,5 @@ urlpatterns = [
     #path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
 
     #path('post/<int:pk>/', views.PostView.as_view(), name='post_detail'),
-    path('', views.PostView.as_view(), name='post_list'),
+    path('', views.PostView.as_view()),
 ]
