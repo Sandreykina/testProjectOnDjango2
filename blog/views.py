@@ -29,7 +29,8 @@ class PostView(generics.RetrieveAPIView):
     def post(self, request, *args, **kwargs):
         new_post_data = request.data
 
-        user = User.objects.get(id=new_post_data["author"])
+        # user = User.objects.get(id=new_post_data["author"])
+        user = request.user.username
 
         new_post = Post.objects.create(
             author= user,
