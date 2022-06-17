@@ -8,10 +8,12 @@ from .serializers import PostSerializer
 from django.conf import settings
 from django.contrib.auth.models import User
 from rest_framework import status
+from django.views.decorators.csrf import csrf_exempt
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
     #get post by Id or get all posts if there is no Id
     def get(self, request, *args, **kwargs):
         try:
@@ -26,6 +28,7 @@ class PostView(generics.RetrieveAPIView):
         return Response(serializer.data)
 
     #add new post
+    @csrf_exempt
     def post(self, request, *args, **kwargs):
         new_post_data = request.data
 
@@ -42,6 +45,7 @@ class PostView(generics.RetrieveAPIView):
         return Response(serializer.data)
 
     #change post by id
+    @csrf_exempt
     def put(self, request, *args, **kwargs):
         id = request.query_params["id"]
         
@@ -63,6 +67,7 @@ class PostView(generics.RetrieveAPIView):
             return Response(serializer.data)
 
     #delete post by id
+    @csrf_exempt
     def delete(self, request, *args, **kwargs):
         id = request.query_params["id"]
         
