@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-q4j6ze+2a*6myq^9#y&lfft5$&8$yq%!7d*t@asc$zs6)#1u=c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['elena5645.pythonanywhere.com']
 
 
 # Application definition
@@ -124,6 +124,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+ALLOWED_HOSTS = ['127.0.0.1', 'elenasandr.pythonanywhere.com', 'elena5645.pythonanywhere.com']
+=======
 ALLOWED_HOSTS = ['127.0.0.1', 'elena5645.pythonanywhere.com']
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -136,3 +138,6 @@ CORS_ORIGIN_WHITELIST = [
        'https://blog-on-vue1.herokuapp.com',
        'https://github.com',
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = Path(BASE_DIR / 'media')
