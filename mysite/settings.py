@@ -124,11 +124,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ['127.0.0.1', 'elenasandr.pythonanywhere.com', 'elena5645.pythonanywhere.com']
 =======
 ALLOWED_HOSTS = ['127.0.0.1', 'elena5645.pythonanywhere.com']
->>>>>>> 66abe5b9bb1962defe26205bb6227ed723118038
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
