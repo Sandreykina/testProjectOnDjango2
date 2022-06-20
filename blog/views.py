@@ -28,7 +28,7 @@ class PostView(generics.RetrieveAPIView):
         return Response(serializer.data)
 
     #add new post
-    #@csrf_exempt
+    @csrf_exempt
     def post(self, request, *args, **kwargs):
         new_post_data = request.data
 
