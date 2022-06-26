@@ -10,6 +10,10 @@ from django.contrib.auth.models import User
 from rest_framework import status
 from django.views.decorators.csrf import csrf_protect
 
+def home(request):
+    return render(request, 'index.html')
+
+
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
@@ -28,7 +32,7 @@ class PostView(generics.RetrieveAPIView):
         return Response(serializer.data)
 
     #add new post
-    @csrf_protect
+    # @csrf_protect
     def post(self, request, *args, **kwargs):
         new_post_data = request.data
 
@@ -45,7 +49,7 @@ class PostView(generics.RetrieveAPIView):
         return Response(serializer.data)
 
     #change post by id
-    @csrf_protect
+    # @csrf_protect
     def put(self, request, *args, **kwargs):
         id = request.query_params["id"]
         
@@ -67,7 +71,7 @@ class PostView(generics.RetrieveAPIView):
             return Response(serializer.data)
 
     #delete post by id
-    @csrf_protect
+    # @csrf_protect
     def delete(self, request, *args, **kwargs):
         id = request.query_params["id"]
         
