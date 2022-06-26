@@ -138,7 +138,7 @@ CORS_ORIGIN_WHITELIST = [
        'http://localhost:8080',
        'https://blog-on-vue1.herokuapp.com',
        'https://github.com',
-       'https://test-project-on-django.herokuapp.com/'
+       'https://test-project-on-django.herokuapp.com'
 ]
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True
