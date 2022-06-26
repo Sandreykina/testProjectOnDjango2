@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-q4j6ze+2a*6myq^9#y&lfft5$&8$yq%!7d*t@asc$zs6)#1u=c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elena5645.pythonanywhere.com']
+ALLOWED_HOSTS = ['elena5645.pythonanywhere.com', 'test-project-on-django.herokuapp.com/']
 
 
 # Application definition
@@ -138,6 +138,7 @@ CORS_ORIGIN_WHITELIST = [
        'http://localhost:8080',
        'https://blog-on-vue1.herokuapp.com',
        'https://github.com',
+       'https://test-project-on-django.herokuapp.com/'
 ]
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True
