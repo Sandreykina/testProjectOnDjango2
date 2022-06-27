@@ -3,28 +3,28 @@
   "assets": {
     "css/app.3b545419.css": {
       "name": "css/app.3b545419.css",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\css\\app.3b545419.css",
-      "publicPath": "/assets/dist/css/app.3b545419.css"
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\static\\assets\\dist\\css\\app.3b545419.css",
+      "publicPath": "static/assets/dist/css/app.3b545419.css"
     },
     "bundle.js": {
       "name": "bundle.js",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\bundle.js",
-      "publicPath": "/assets/dist/bundle.js"
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\static\\assets\\dist\\bundle.js",
+      "publicPath": "static/assets/dist/bundle.js"
     },
     "favicon.ico": {
       "name": "favicon.ico",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\favicon.ico",
-      "publicPath": "/assets/dist/favicon.ico"
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\static\\assets\\dist\\favicon.ico",
+      "publicPath": "static/assets/dist/favicon.ico"
     },
     "bundle.js.map": {
       "name": "bundle.js.map",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\bundle.js.map",
-      "publicPath": "/assets/dist/bundle.js.map"
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\static\\assets\\dist\\bundle.js.map",
+      "publicPath": "static/assets/dist/bundle.js.map"
     },
     "index.html": {
       "name": "index.html",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\index.html",
-      "publicPath": "/assets/dist/index.html"
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\static\\assets\\dist\\index.html",
+      "publicPath": "static/assets/dist/index.html"
     }
   },
   "chunks": {
@@ -33,5 +33,5 @@
       "bundle.js"
     ]
   },
-  "publicPath": "/assets/dist/"
+  "publicPath": "static/assets/dist/"
 }
