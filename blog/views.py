@@ -10,8 +10,8 @@ from django.contrib.auth.models import User
 from rest_framework import status
 from django.views.decorators.csrf import csrf_protect
 
-def home(request):
-    return render(request, 'index.html')
+# def home(request):
+#     return render(request, 'index.html')
 
 
 class PostView(generics.RetrieveAPIView):

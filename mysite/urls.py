@@ -19,6 +19,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
 from blog import views
+from django.views.generic import TemplateView
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -43,5 +44,6 @@ urlpatterns = [
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    re_path(r'^$', views.home, name='home'),
+    re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='index' )
+    #re_path(r'^$', views.home, name='home'),
 ]
