@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '/static/dist/' : 'http://127.0.0.1:8080',
-  outputDir: '/static/dist',
+  outputDir: '../static/dist',
   indexPath: '../../blog/templates/base-vue.html', // relative to outputDir!
 
   devServer: {
