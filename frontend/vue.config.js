@@ -19,7 +19,7 @@ module.exports = {
     process.env.NODE_ENV === "production"
       ? "/assets/dist/"
       : "http://127.0.0.1:8080",
-  outputDir: "..static/assets/dist",
+  outputDir: "../assets/dist",
 
   chainWebpack: config => {
     config.optimization.splitChunks(false)
