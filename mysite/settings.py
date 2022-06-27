@@ -134,10 +134,7 @@ STATICFILES_DIRS = [
 #         'CACHE': not DEBUG,
 #         'BUNDLE_DIR_NAME': 'webpack_bundles/', # must end with slash
 #         'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
-#         'POLL_INTERVAL': 0.1,
-#         'TIMEOUT': None,
 #         'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
-#         'LOADER_CLASS': 'webpack_loader.loader.WebpackLoader',
 #     }
 # }
 
@@ -171,7 +168,7 @@ REST_FRAMEWORK = {
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'dist/',
+        'BUNDLE_DIR_NAME': 'static/dist/',
         'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json')
     }
 }
