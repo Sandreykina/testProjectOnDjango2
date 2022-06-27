@@ -129,14 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-# WEBPACK_LOADER = {
-#     'DEFAULT': {
-#         'CACHE': not DEBUG,
-#         'BUNDLE_DIR_NAME': 'webpack_bundles/', # must end with slash
-#         'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
-#         'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
-#     }
-# }
 
 ALLOWED_HOSTS = ['127.0.0.1', 'elena5645.pythonanywhere.com']
 # Default primary key field type
@@ -147,7 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
        'http://localhost:8080',
-       'https://blog-on-vue1.herokuapp.com',
+       'https://elena5645.pythonanywhere.com',
        'http://127.0.0.1:8000'
 ]
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
