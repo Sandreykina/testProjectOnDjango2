@@ -17,9 +17,9 @@ const BundleTracker = require("webpack-bundle-tracker");
 module.exports = {
   publicPath:
     process.env.NODE_ENV === "production"
-      ? "static/assets/dist/"
+      ? "/assets/dist/"
       : "http://127.0.0.1:8080",
-  outputDir: "../static/assets/dist",
+  outputDir: "../assets/dist",
 
   chainWebpack: config => {
     config.optimization.splitChunks(false)
