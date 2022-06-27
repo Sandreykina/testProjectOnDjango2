@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #for webpack-loader
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/dist')
+    os.path.join(BASE_DIR, 'assets')
 ]
 
 ALLOWED_HOSTS = ['127.0.0.1', 'elena5645.pythonanywhere.com']
