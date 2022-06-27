@@ -1,6 +1,10 @@
 {% extends 'base-vue.html' %}
+{% load render_bundle from webpack_loader %}
 
 {% block content %}
   <h2>from django index.html</h2>
-  <div id="app"></div>
+  <div id="app">
+    {% render_bundle 'app' %}
+  </div>
+  
 {% endblock %}

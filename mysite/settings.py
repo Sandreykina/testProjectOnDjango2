@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q4j6ze+2a*6myq^9#y&lfft5$&8$yq%!7d*t@asc$zs6)#1u=c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['elena5645.pythonanywhere.com']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'corsheaders',
     'drf_yasg',
+    'webpack_loader'
 ]
 
 MIDDLEWARE = [
@@ -166,5 +167,12 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication'
     ]
+}
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json')
+    }
 }
 
