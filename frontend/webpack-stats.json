@@ -3,27 +3,27 @@
   "assets": {
     "bundle.css": {
       "name": "bundle.css",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\bundle.css",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\bundle.css",
       "publicPath": "http://127.0.0.1:8080/bundle.css"
     },
     "bundle.js": {
       "name": "bundle.js",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\bundle.js",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\bundle.js",
       "publicPath": "http://127.0.0.1:8080/bundle.js"
     },
     "favicon.ico": {
       "name": "favicon.ico",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\favicon.ico",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\favicon.ico",
       "publicPath": "http://127.0.0.1:8080/favicon.ico"
     },
     "bundle.js.map": {
       "name": "bundle.js.map",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\bundle.js.map",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\bundle.js.map",
       "publicPath": "http://127.0.0.1:8080/bundle.js.map"
     },
     "index.html": {
       "name": "index.html",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\index.html",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\assets\\dist\\index.html",
       "publicPath": "http://127.0.0.1:8080/index.html"
     }
   },

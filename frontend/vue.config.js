@@ -20,7 +20,7 @@ module.exports = {
   //     ? "/static/assets/dist/"
   //     : "http://127.0.0.1:8080",
   publicPath: "http://127.0.0.1:8080",
-  outputDir: "./dist",
+  outputDir: "../assets/dist",
 
   chainWebpack: config => {
     config.optimization.splitChunks(false)
