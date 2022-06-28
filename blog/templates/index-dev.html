@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load render_bundle from webpack_loader %}
+
+{% block content %}
+  <h2>from django index-dev.html</h2>
+  <div id="app">
+    {% render_bundle 'app' %}
+  </div>
+  
+{% endblock %}
