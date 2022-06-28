@@ -1,6 +1,37 @@
 {
-  "status": "compile",
-  "assets": {},
-  "chunks": {},
-  "publicPath": "http://127.0.0.1:8080/"
+  "status": "done",
+  "assets": {
+    "css/app.3b545419.css": {
+      "name": "css/app.3b545419.css",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\css\\app.3b545419.css",
+      "publicPath": "/static/assets/dist/css/app.3b545419.css"
+    },
+    "bundle.js": {
+      "name": "bundle.js",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\bundle.js",
+      "publicPath": "/static/assets/dist/bundle.js"
+    },
+    "favicon.ico": {
+      "name": "favicon.ico",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\favicon.ico",
+      "publicPath": "/static/assets/dist/favicon.ico"
+    },
+    "bundle.js.map": {
+      "name": "bundle.js.map",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\bundle.js.map",
+      "publicPath": "/static/assets/dist/bundle.js.map"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\frontend\\dist\\index.html",
+      "publicPath": "/static/assets/dist/index.html"
+    }
+  },
+  "chunks": {
+    "app": [
+      "css/app.3b545419.css",
+      "bundle.js"
+    ]
+  },
+  "publicPath": "/static/assets/dist/"
 }

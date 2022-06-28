@@ -2,17 +2,19 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        {% block style %}
+        {% block head %}
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- <link rel="icon" href="favicon.ico"> -->
+            
         {% endblock %}
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
-        {% block js %}
+        {% block body %}
+            {% block content %}
+            базовый html
+            {% endblock %}
         {% endblock %}
     </body>
 </html>
