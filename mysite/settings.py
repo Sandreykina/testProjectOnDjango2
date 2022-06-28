@@ -123,11 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #for webpack-loader
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/assets')
+    os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, 'frontenddist')
 ]
 
 ALLOWED_HOSTS = ['127.0.0.1', 'elena5645.pythonanywhere.com']
@@ -160,7 +161,7 @@ REST_FRAMEWORK = {
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'dist/',
+        'BUNDLE_DIR_NAME': 'dist',
         'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json')
     }
 }

@@ -10,9 +10,13 @@ from django.contrib.auth.models import User
 from rest_framework import status
 from django.views.decorators.csrf import csrf_protect
 
-# def home(request):
-#     return render(request, 'index.html')
-
+def home(request):
+    if settings.DEBUG:
+        template_name = "index-dev.html"
+    else:
+        template_name = "index.html"
+    return template_name
+    #return render(request, 'index.html')
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
