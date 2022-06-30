@@ -17,7 +17,7 @@ const BundleTracker = require("webpack-bundle-tracker");
 module.exports = {
   publicPath:
     process.env.NODE_ENV === "production"
-      ? "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles"
+      ? "/static/blog/webpack_bundles"
       : "http://127.0.0.1:8080",
   // publicPath: "http://127.0.0.1:8080",
   outputDir: "../blog/static/blog/webpack_bundles",
