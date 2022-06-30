@@ -31,7 +31,7 @@ module.exports = {
   devServer: {
     devMiddleware: {
       publicPath: "http://127.0.0.1:8080",
-      writeToDisk: (filePath) => filePath.endsWith("index.html"),
+      writeToDisk: (filePath) => filePath.endsWith("index-dev.html"),
     },
     hot: "only",
     headers: { "Access-Control-Allow-Origin": "*" },
