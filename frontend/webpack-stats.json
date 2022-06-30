@@ -4,27 +4,27 @@
     "bundle.css": {
       "name": "bundle.css",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\bundle.css",
-      "publicPath": "/static/blog/webpack_bundles/bundle.css"
+      "publicPath": "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles/bundle.css"
     },
     "bundle.js": {
       "name": "bundle.js",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\bundle.js",
-      "publicPath": "/static/blog/webpack_bundles/bundle.js"
+      "publicPath": "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles/bundle.js"
     },
     "favicon.ico": {
       "name": "favicon.ico",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\favicon.ico",
-      "publicPath": "/static/blog/webpack_bundles/favicon.ico"
+      "publicPath": "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles/favicon.ico"
     },
     "bundle.js.map": {
       "name": "bundle.js.map",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\bundle.js.map",
-      "publicPath": "/static/blog/webpack_bundles/bundle.js.map"
+      "publicPath": "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles/bundle.js.map"
     },
     "index.html": {
       "name": "index.html",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\index.html",
-      "publicPath": "/static/blog/webpack_bundles/index.html"
+      "publicPath": "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles/index.html"
     }
   },
   "chunks": {
@@ -33,5 +33,5 @@
       "bundle.js"
     ]
   },
-  "publicPath": "/static/blog/webpack_bundles/"
+  "publicPath": "https://elena5645.pythonanywhere.com/static/blog/webpack_bundles/"
 }
