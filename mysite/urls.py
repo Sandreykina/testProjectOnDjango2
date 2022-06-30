@@ -44,6 +44,6 @@ urlpatterns = [
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='index' )
-    #re_path(r'^$', views.home, name='home'),
+    #re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='index' )
+    path('', views.home, name='home'),
 ]

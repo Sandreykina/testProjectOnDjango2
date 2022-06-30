@@ -15,8 +15,9 @@ def home(request):
         template_name = "index-dev.html"
     else:
         template_name = "index.html"
-    return template_name
+    #return template_name
     #return render(request, 'index.html')
+    return render(request, template_name)
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
