@@ -126,9 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #for webpack-loader
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets')
-]
+STATICFILES_DIRS = []
 
 ALLOWED_HOSTS = ['127.0.0.1', 'elena5645.pythonanywhere.com']
 # Default primary key field type
@@ -160,7 +158,7 @@ REST_FRAMEWORK = {
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'assets/dist',
+        'BUNDLE_DIR_NAME': 'blog/webpack_bundles/',
         'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json')
     }
 }
