@@ -9,7 +9,7 @@
     <my-popup v-model:show="popupVisible">
       <post-form @add="addPost">Создание поста</post-form>
     </my-popup>
-    <post-list :posts="posts" v-if="!isPostLoading"></post-list>/>
+    <post-list :posts="posts" v-if="!isPostLoading"></post-list>
   </div>
 </template>
 

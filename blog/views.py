@@ -10,12 +10,14 @@ from django.contrib.auth.models import User
 from rest_framework import status
 from django.views.decorators.csrf import csrf_protect
 
+
 def home(request):
     if settings.DEBUG:
         template_name = "index-dev.html"
     else:
         template_name = "index.html"
     return render(request, template_name)
+
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
@@ -82,3 +84,19 @@ class PostView(generics.RetrieveAPIView):
             post_to_delete=Post.objects.get(id=id)
             post_to_delete.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# from django.contrib.auth import login as auth_login
+# from django.contrib.auth.forms import UserCreationForm
+# from django.shortcuts import render, redirect
+
+# def signup(request):
+#     if request.method == 'POST':
+#         form = UserCreationForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             auth_login(request, user)
+#             return redirect('home')
+#     else:
+#         form = UserCreationForm()
+#     return render(request, 'signup.html', {'form': form})

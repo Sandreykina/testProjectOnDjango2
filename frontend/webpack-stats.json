@@ -4,34 +4,40 @@
     "bundle.css": {
       "name": "bundle.css",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\bundle.css",
-      "publicPath": "/static/blog/webpack_bundles/bundle.css"
+      "publicPath": "http://127.0.0.1:8080/bundle.css"
     },
     "bundle.js": {
       "name": "bundle.js",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\bundle.js",
-      "publicPath": "/static/blog/webpack_bundles/bundle.js"
+      "publicPath": "http://127.0.0.1:8080/bundle.js"
     },
     "favicon.ico": {
       "name": "favicon.ico",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\favicon.ico",
-      "publicPath": "/static/blog/webpack_bundles/favicon.ico"
-    },
-    "bundle.js.map": {
-      "name": "bundle.js.map",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\bundle.js.map",
-      "publicPath": "/static/blog/webpack_bundles/bundle.js.map"
+      "publicPath": "http://127.0.0.1:8080/favicon.ico"
     },
     "index.html": {
       "name": "index.html",
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\index.html",
-      "publicPath": "/static/blog/webpack_bundles/index.html"
+      "publicPath": "http://127.0.0.1:8080/index.html"
+    },
+    "app.4463666f8be72e69.hot-update.js": {
+      "name": "app.4463666f8be72e69.hot-update.js",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\app.4463666f8be72e69.hot-update.js",
+      "publicPath": "http://127.0.0.1:8080/app.4463666f8be72e69.hot-update.js"
+    },
+    "app.4463666f8be72e69.hot-update.json": {
+      "name": "app.4463666f8be72e69.hot-update.json",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\app.4463666f8be72e69.hot-update.json",
+      "publicPath": "http://127.0.0.1:8080/app.4463666f8be72e69.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
-      "bundle.js"
+      "bundle.js",
+      "app.4463666f8be72e69.hot-update.js"
     ]
   },
-  "publicPath": "/static/blog/webpack_bundles/"
+  "publicPath": "http://127.0.0.1:8080/"
 }
