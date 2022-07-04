@@ -163,4 +163,4 @@ WEBPACK_LOADER = {
     }
 }
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = "home"

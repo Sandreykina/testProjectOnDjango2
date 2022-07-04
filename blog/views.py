@@ -9,7 +9,10 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from rest_framework import status
 from django.views.decorators.csrf import csrf_protect
-
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 
 def home(request):
     if settings.DEBUG:
@@ -18,6 +21,18 @@ def home(request):
         template_name = "index.html"
     return render(request, template_name)
 
+def register(request):  
+    if request.POST == 'POST':  
+        form = UserCreationForm(request.POST)  
+        if form.is_valid(): 
+            user = form.save()
+            login(request, user)
+            return redirect('home')  
+        else:
+            console.log("not valid")
+    else:  
+        form = UserCreationForm()  
+    return render(request, 'registration/signup.html', {'form':form}  )
 
 class PostView(generics.RetrieveAPIView):
     queryset = Post.objects.all()

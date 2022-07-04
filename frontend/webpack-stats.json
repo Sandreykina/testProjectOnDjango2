@@ -21,22 +21,22 @@
       "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\index.html",
       "publicPath": "http://127.0.0.1:8080/index.html"
     },
-    "app.4463666f8be72e69.hot-update.js": {
-      "name": "app.4463666f8be72e69.hot-update.js",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\app.4463666f8be72e69.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/app.4463666f8be72e69.hot-update.js"
+    "app.fd59fb07919e1b17.hot-update.js": {
+      "name": "app.fd59fb07919e1b17.hot-update.js",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\app.fd59fb07919e1b17.hot-update.js",
+      "publicPath": "http://127.0.0.1:8080/app.fd59fb07919e1b17.hot-update.js"
     },
-    "app.4463666f8be72e69.hot-update.json": {
-      "name": "app.4463666f8be72e69.hot-update.json",
-      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\app.4463666f8be72e69.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/app.4463666f8be72e69.hot-update.json"
+    "app.fd59fb07919e1b17.hot-update.json": {
+      "name": "app.fd59fb07919e1b17.hot-update.json",
+      "path": "C:\\Users\\Elena\\testProjectOnDjango2\\blog\\static\\blog\\webpack_bundles\\app.fd59fb07919e1b17.hot-update.json",
+      "publicPath": "http://127.0.0.1:8080/app.fd59fb07919e1b17.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
       "bundle.js",
-      "app.4463666f8be72e69.hot-update.js"
+      "app.fd59fb07919e1b17.hot-update.js"
     ]
   },
   "publicPath": "http://127.0.0.1:8080/"
